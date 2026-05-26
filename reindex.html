@@ -1,0 +1,277 @@
+# DreamScape — Redesigned Version
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamScape</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    /* NAVBAR */
+    nav{
+      position:fixed;
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.3);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    nav h2{
+      color:white;
+      font-size:1.5rem;
+      font-weight:700;
+    }
+
+    /* HERO SECTION */
+    header{
+      height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:5rem;
+      font-weight:800;
+      letter-spacing:2px;
+      margin-bottom:20px;
+      animation: fadeIn 2s ease;
+    }
+
+    header p{
+      font-size:1.2rem;
+      max-width:700px;
+      line-height:1.8;
+      color:#e2e8f0;
+      animation: fadeIn 3s ease;
+    }
+
+    /* BUTTON */
+    .btn{
+      margin-top:30px;
+      padding:16px 40px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(135deg,#38bdf8,#6366f1);
+      color:white;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(99,102,241,0.4);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px) scale(1.03);
+    }
+
+    /* GALLERY */
+    .gallery{
+      padding:100px 10%;
+    }
+
+    .gallery h2{
+      text-align:center;
+      font-size:2.8rem;
+      margin-bottom:60px;
+      font-weight:700;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    /* CARD */
+    .card{
+      background:#1e293b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      font-size:1.4rem;
+    }
+
+    .card-content p{
+      color:#cbd5e1;
+      line-height:1.6;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#020617;
+      color:#94a3b8;
+      font-size:0.95rem;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      header h1{
+        font-size:3rem;
+      }
+
+      header p{
+        font-size:1rem;
+      }
+
+      .gallery h2{
+        font-size:2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>DreamScape</h2>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <h1>DreamScape</h1>
+
+    <p>
+      A futuristic world of beauty, creativity, and imagination.
+      Built with Love and hard work ✨
+              love my family and friends.
+    </p>
+
+    <button class="btn" onclick="showMessage()">
+      Explore Magic
+    </button>
+  </header>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <h2>Beautiful Worlds</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Mountains</h3>
+          <p>
+            Peaceful landscapes that inspire adventure and freedom.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Forest</h3>
+          <p>
+            Mysterious green forests filled with life and wonder.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Ocean</h3>
+          <p>
+            The endless beauty of the sea under golden sunsets.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Made with ❤️ using HTML, CSS & JavaScript
+<section class="about">
+  <h2>About Me</h2>
+
+  <p>
+    Hi I'm kayden 'dev', I'm learning web development and building beautiful websites.
+    This is one of my first projects.If any misteke you notice inform me I'll work on it 
+  </p>
+</section>
+
+  </footer>
+
+  <script>
+    function showMessage(){
+      alert("Welcome to your redesigned AI-powered website 🚀");
+    }
+  </script>
+
+</body>
+</html>
+```
